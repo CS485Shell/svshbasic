@@ -23,7 +23,6 @@ int cmdInput()
 {
     string cmdstring;
     cout << prompt;
-    //getline(cin, cmdstring);
     cin >> cmdstring;
     if (cmdstring == "bye") //Exit on "bye" command
     {
