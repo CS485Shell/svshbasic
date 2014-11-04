@@ -12,6 +12,7 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
+    <itemPath>Makefile</itemPath>
   </logicalFolder>
   <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
   <sourceRootList>
@@ -33,7 +34,7 @@
           <buildCommandWorkingDir>.</buildCommandWorkingDir>
           <buildCommand>${MAKE} -f Makefile</buildCommand>
           <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
-          <executablePath></executablePath>
+          <executablePath>svsh.exe</executablePath>
           <ccTool>
             <incDir>
               <pElem></pElem>
@@ -41,6 +42,8 @@
           </ccTool>
         </makeTool>
       </makefileType>
+      <item path="Makefile" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="functions.cpp" ex="false" tool="1" flavor2="4">
         <ccTool>
         </ccTool>
