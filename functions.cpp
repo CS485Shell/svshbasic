@@ -1,5 +1,4 @@
 //functions.cpp
-//Michael Carlton
 //CS485 Project 3 - svsh
 //11-3-14
 //Contains the core functions and built-in commands for the shared variable
