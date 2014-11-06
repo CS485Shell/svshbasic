@@ -34,44 +34,44 @@ int cmdInput()
     }
     
     while (command != "bye")
-        {
-                if (command == "#")
-                {
-                    // #anytext
-                    // Comments
-                    // Any text after the # will be ignored.
-                        cout << "Comment Section.\n";
-                }
-                else if (command == "defprompt")
-                {
-                    // defprompt prompt
-                    // Set the shell prompt to prompt. 
-                    // The default prompt should be ``svsh > ''.
-                    cout << "defprompt stuff here.\n";
-                }
-                else if (command == "cd")
-                {
-                    // cd directory_name
-                    cout << "cd has been called to directory_name. \n";
-                }
-                else if (command == "variable_name")
-                {
-                    // variable_name = variable_def
-                    // sets the variable specified by variable_name to variable_def.
-                    cout << "var stuff here.\n";
-                }
-                else if (command == "listjobs")
-                {
-                    // List all jobs running in the background
-                    cout << "listjobs call has been made. \n";
-                }
-                else
-                {
-                        cout << "Error: Unknown Command.\n";
-                }
-                cout << "svsh > ";
-                cin >> command;
-        }
+    {
+            if (command == "#")
+            {
+                // #anytext
+                // Comments
+                // Any text after the # will be ignored.
+                    cout << "Comment Section.\n";
+            }
+            else if (command == "defprompt")
+            {
+                // defprompt prompt
+                // Set the shell prompt to prompt. 
+                // The default prompt should be ``svsh > ''.
+                cout << "defprompt stuff here.\n";
+            }
+            else if (command == "cd")
+            {
+                // cd directory_name
+                cout << "cd has been called to directory_name. \n";
+            }
+            else if (command == "variable_name")
+            {
+                // variable_name = variable_def
+                // sets the variable specified by variable_name to variable_def.
+                cout << "var stuff here.\n";
+            }
+            else if (command == "listjobs")
+            {
+                // List all jobs running in the background
+                cout << "listjobs call has been made. \n";
+            }
+            else
+            {
+                    cout << "Error: Unknown Command.\n";
+            }
+            cout << "svsh > ";
+            cin >> command;
+    }
 
 
 }
