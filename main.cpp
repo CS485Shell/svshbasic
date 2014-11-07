@@ -1,6 +1,5 @@
 /*
  * File:   main.cpp
- * Author: Michael Carlton
  * CS485 Project 3 - svsh (Shared Variable Shell)
  * This file contains the main() function for the svsh.
  * Created on November 3, 2014, 2:26 PM
