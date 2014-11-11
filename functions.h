@@ -1,5 +1,4 @@
 //functions.h
-//Michael Carlton
 //CS485 Project 3 - svsh
 //11-3-14
 //Contains the headers for core functions and built-in commands

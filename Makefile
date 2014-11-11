@@ -1,6 +1,5 @@
 ## -*- Makefile -*-
 ##
-## User: Michael
 ## Time: Nov 3, 2014 7:48:26 PM
 ## Makefile created by Oracle Solaris Studio.
 ##
