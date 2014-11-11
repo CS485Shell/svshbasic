@@ -49,7 +49,7 @@ int cmdInput()
     {
         return 1;
     }
-    else if (strcmp(str, cin.eof())) //Exit on EOF character CTRL+D
+    else if (str == cin.eof()) //Exit on EOF character CTRL+D
     {
         return 2;
     }
