@@ -27,8 +27,7 @@ static bool ShowTokens = false;   //Default is to not show tokens
 int cmdInput()
 {
     char str[60];
-    int space_flag = 0;
-    int i = 0;
+    
     //string CommandLine[] = string.split(" ", 2);
     //string command = CommandLine[0];
     //string theRest = CommandLine[1];
@@ -42,14 +41,16 @@ int cmdInput()
     fgets(str, sizeof(str), stdin);
     str[strlen(str) - 1] = '\0';
     
+    command = strtok(str, " ");
+    cout << command << endl;
     
-    //str[0] = command;    
-    
-    if (strcmp(str, "bye") != 0) //Exit on "bye" command
+    if (strcmp(str, "bye") == 0) //Exit on "bye" command
+    //if (command == "bye")
     {
         return 1;
     }
-    else if (str == cin.eof()) //Exit on EOF character CTRL+D
+    else if (cin.eof()) //Exit on EOF character CTRL+D
+    //if (cin.eof())
     {
         return 2;
     }
@@ -58,8 +59,10 @@ int cmdInput()
    the process group a SIGCONT signal to wake it up.  */
     
     while (strcmp(str, "bye") != 0)
+    //while (command != "bye")
     {
             if (strcmp(str, "#") == 0)
+        //if (command == "#")
             {
                 // #anytext
                 // Comments
@@ -68,29 +71,39 @@ int cmdInput()
                 printf("Comment Section.\n");
             }
             else if (strcmp(str, "defprompt") == 0)
+        //else if (command == "defprompt")
             {
                 // defprompt prompt
                 // Set the shell prompt to prompt. 
                 // The default prompt should be ``svsh > ''.
                 printf("defprompt stuff here.\n");
-                prompt = str;
+                //prompt = str;
             }
             else if (strcmp(str, "cd") == 0)
+        //else if (command == "cd")
             {
                 // cd directory_name
                 
                 printf("cd has been called to directory_name. \n");
             }
             else if (strcmp(str, "variable_name") == 0)
+        //else if (command == "variable_name")
             {
                 // variable_name = variable_def
                 // sets the variable specified by variable_name to variable_def.
                 cout << "var stuff here.\n";
             }
-            else if (strcmp(str, "istjobs") == 0)
+            else if (strcmp(str, "listjobs") == 0)
+        //else if (command == "listjobs")
             {
                 // List all jobs running in the background
                 printf("listjobs call has been made. \n");
+            }
+            else if (strcmp(str, "bye") == 0) //Exit on "bye" command
+            //if (command == "bye")
+            {
+                printf("Exiting svsh normally via \"bye\" command.");
+                return 1;
             }
             else
             {
@@ -102,15 +115,9 @@ int cmdInput()
             str[strlen(str) - 1] = '\0';
     }
 
-    return 0;
 }
 
 
-int main()
-{
-    cmdInput();
-    return 0;
-}
 void tokenize()
 {
     //Takes cmdstring and breaks it into individual tokens, gives them a type,
